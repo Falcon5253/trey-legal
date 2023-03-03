@@ -1,3 +1,242 @@
-// header {
-    // background-color: 
-// }
+@use '../variables';
+
+header {
+    background-image: url("../img/skyscraper-urban-view.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.header-info {
+    backdrop-filter: blur(5px);
+    background-color: rgba($color: #FFFFFF, $alpha: 0.3);
+    display: flex;
+    justify-content: space-between;
+    width: variables.$view-width;
+    padding-left: calc((100% - variables.$view-width) / 2);
+    padding-right: calc((100% - variables.$view-width) / 2);
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        font-size: 24px;
+        flex-grow: 2;
+    }
+
+    &__logo {
+        display: flex;
+
+        .header-logo {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__logo::after {
+        margin-right: 50px;
+        margin-left: 50px;
+        content: '';
+        display: inline-block;
+        width: 3px;
+        background-color: variables.$blue;
+    }
+
+    &__logo {
+        height: 100%;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 200px;
+
+    &__mail {
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: variables.$blue;
+        letter-spacing: 2px;
+        display: block;
+        height: 100%;
+        padding-top: 25px;
+    }
+
+    &__img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.phone-numbers {
+    line-height: 2;
+
+    &__link {
+        letter-spacing: 2px;
+        color: variables.$blue;
+        text-decoration: none;
+    }
+}
+
+.search {
+    position: relative;
+    margin-top: 40px;
+
+    &__input {
+        color: #FFFFFF;
+        height: 36px;
+        border: none;
+        background-color: #A9A9A9;
+        padding: 0 0 4px 50px;
+        font-size: 18px;
+    }
+    
+    &__input::placeholder {
+        color: white;
+        text-transform: lowercase;
+        font-style: italic;
+    }
+
+    &__icon {
+        height: 40px;
+        width: 50px;
+        position: absolute;
+    }
+}
+
+.navigation {
+    backdrop-filter: blur(1px);
+    background-color: rgba($color: variables.$blue, $alpha: 0.7);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: variables.$view-width;
+    padding-left: calc((100% - variables.$view-width) / 2);
+    padding-right: calc((100% - variables.$view-width) / 2);
+    align-items: center;
+
+    &__services-button, &__item, &__lead-button {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        text-transform: uppercase;
+        width: 150px;
+    }
+
+    &__services-button {
+        background: none;
+        border: #FFFFFF 1px solid;
+        font-weight: 600;
+        position: relative;
+        justify-content: flex-start;
+        padding-right: 30px;
+        padding-left: 30px;
+        width: 160px;
+    }
+
+    &__button-arrow {
+        position: absolute;
+        width: 20px;
+        right: 20px;
+    }
+
+    &__lead-button {
+        background-color: variables.$orange;
+        border: none;
+        width: 250px;
+    }
+
+    &__item:hover, &__services-button:hover {
+        background-color: rgba($color: variables.$blue, $alpha: 0.8);
+        cursor: pointer;
+    }
+
+    &__lead-button:hover {
+        cursor: pointer;
+    }
+}
+
+.header-lead {
+    width: 100%;
+
+    &__background {
+        width: calc(50% - 150px);
+        background-color: rgba($color: variables.$blue, $alpha: 0.4);
+        height: calc(100vh - 260px);
+        padding: 50px 50px 0 100px;
+        display: flex;
+        flex-direction: column;
+        // position: relative;
+    }
+    &__title {
+        color: white;
+        // flex-grow: 2;
+        font-size: 60px;
+        margin-top: 0;
+        display: block;
+        height: calc((100vh - 260px) / 2);
+        position: relative;
+    }
+    &__title::after {
+        content: "";
+        display: block;
+        background-color: white;
+        left: -100px;
+        bottom: 50px;
+        width: calc(50% + 50px);
+        height: 2px;
+        position: absolute;
+    }
+    &__text {
+        color: white;
+        font-size: 25px;
+    }
+    &__button {
+        margin-top: 50px;
+        background-color: variables.$orange;
+        border: none;
+        color: black;
+        text-decoration: none;
+        height: 50px;
+        width: 300px;
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+}
+
+
+
+.our-services {
+}
+
+.our-services__title {
+}
+
+.our-services__list {
+}
+
+.service {
+}
+
+.service__img {
+}
+
+.service__title {
+}
+
+.service__text {
+}
+
+.advantages {
+}
+
+.advantages__title {
+}

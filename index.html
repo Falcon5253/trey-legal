@@ -10,29 +10,43 @@
 <body>
     <header>
         <div class="header-info">
-            <img src="" alt="" class="header-logo">
-            <div class="contacts">
-                <img src="img/telegram.png" alt="" class="contacts__img">
-                <img src="img/telegram.png" alt="" class="contacts__img">
-                <img src="img/telegram.png" alt="" class="contacts__img">
-                <span class="contacts__mail">mail@trey.legal</span>
-                <p class="contacts__phone-numbers">8 (800) 000-00-00<br>+7 (999) 914-06-66</p>
+            <div class="header-info__logo">
+                <img src="img/logo.png" alt="" class="header-logo">
             </div>
-            <input type="text" class='header-search'>
+            <div class="header-info__links">
+                <div class="contacts">
+                    <img src="img/telegram.png" alt="" class="contacts__img">
+                    <img src="img/telegram.png" alt="" class="contacts__img">
+                    <img src="img/telegram.png" alt="" class="contacts__img">
+                    <a href="mailto:mail@trey.legal" class="contacts__mail">mail@trey.legal</a>
+                </div>
+                <p class="phone-numbers">
+                    <a class="phone-numbers__link" href="tel:8-800-000-00-00">8 (800) 000-00-00</a>
+                        <br>
+                    <a class="phone-numbers__link" href="tel:+7-999-914-06-66">+7 (999) 914-06-66</a>
+                </p>
+                <label class='search'>
+                    <img src="img/search.svg" alt="search" class='search__icon'>
+                    <input id="search" type="text" class='search__input' placeholder='поиск'>
+                </label>
+            </div>
         </div>
         <nav class="navigation">
-            <input type="button" value="Услуги" class="navigation__services-button">
-            <a href="" class="navigation__item">О компании</a>
-            <a href="" class="navigation__item">Услуги</a>
-            <a href="" class="navigation__item">Статьи</a>
-            <a href="" class="navigation__item">Новости</a>
-            <a href="" class="navigation__item">Контакты</a>
+            <button class="navigation__services-button">
+                Услуги
+                <img src="img/arrow-down.svg" alt="arrow-down" class="navigation__button-arrow">
+            </button>
+            <a href="#" class="navigation__item">О компании</a>
+            <a href="#" class="navigation__item">Услуги</a>
+            <a href="#" class="navigation__item">Статьи</a>
+            <a href="#" class="navigation__item">Новости</a>
+            <a href="#" class="navigation__item">Контакты</a>
             <input type="button" value="Оставить заявку" class="navigation__lead-button">
         </nav>
         <div class="header-lead">
             <div class="header-lead__background">
                 <h1 class="header-lead__title">Охрана интеллектуальной собственности в России и за рубежом</h1>
-                <p class="header-lead__text">Мы предоставляем полный спектр услуг</p>
+                <p class="header-lead__text">Мы предоставляем полный спектр услуг, связанных с интеллектуальной собственностью</p>
                 <input class="header-lead__button" type="button" value="Оставить заявку">
             </div>
         </div>
@@ -122,7 +136,7 @@
         </section>
     </main>
     <footer>
-        <div class="contacts_footer">
+        <div class="contacts contacts_footer">
             <img src="img/telegram.png" alt="" class="contacts__img">
             <img src="img/telegram.png" alt="" class="contacts__img">
         </div>
