@@ -2,6 +2,7 @@
 @use 'blocks/header';
 @use 'blocks/our-services';
 @use 'blocks/advantages';
+@use 'blocks/about-us';
 
 @font-face {
     font-family: 'Raleway';
@@ -21,8 +22,4 @@
 
 html {
     font-family: Raleway;
-}
-
-.shifted-article__img {
-    width: 5px;
 }
