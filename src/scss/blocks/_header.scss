@@ -5,6 +5,7 @@ header {
     background-position: center;
     background-size: cover;
     height: 100vh;
+    max-height: 1080px;
 }
 
 .header-info {
@@ -166,37 +167,42 @@ header {
     width: 100%;
 
     &__background {
-        width: calc(50% - 150px);
+        // width: calc(50% - 150px);
         background-color: rgba($color: variables.$blue, $alpha: 0.4);
         height: calc(100vh - 260px);
-        padding: 50px 50px 0 100px;
+        max-height: 820px;
+        padding: 50px 50px 0;
+        width: calc(variables.$view-width / 2);
+        padding-left: calc((100% - variables.$view-width) / 2);
         display: flex;
         flex-direction: column;
-        // position: relative;
     }
+
     &__title {
         color: white;
-        // flex-grow: 2;
         font-size: 60px;
         margin-top: 0;
         display: block;
         height: calc((100vh - 260px) / 2);
         position: relative;
     }
+
     &__title::after {
         content: "";
         display: block;
         background-color: white;
         left: -100px;
-        bottom: 50px;
+        top: 250px;
         width: calc(50% + 50px);
         height: 2px;
         position: absolute;
     }
+
     &__text {
         color: white;
         font-size: 25px;
     }
+
     &__button {
         margin-top: 50px;
         background-color: variables.$orange;
@@ -204,39 +210,16 @@ header {
         color: black;
         text-decoration: none;
         height: 50px;
+        min-height: 50px;
         width: 300px;
         color: white;
         font-weight: 600;
         font-size: 18px;
         text-transform: uppercase;
+        margin-bottom: 100px;
     }
-}
-
-
-
-.our-services {
-}
-
-.our-services__title {
-}
-
-.our-services__list {
-}
-
-.service {
-}
-
-.service__img {
-}
-
-.service__title {
-}
-
-.service__text {
-}
-
-.advantages {
-}
-
-.advantages__title {
+    
+    &__button:hover {
+        cursor: pointer;
+    }
 }

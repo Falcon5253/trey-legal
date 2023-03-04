@@ -1,5 +1,7 @@
 @use 'variables';
 @use 'blocks/header';
+@use 'blocks/our-services';
+@use 'blocks/advantages';
 
 @font-face {
     font-family: 'Raleway';
@@ -19,7 +21,6 @@
 
 html {
     font-family: Raleway;
-    // background-color: variables.$blue;
 }
 
 .shifted-article__img {
