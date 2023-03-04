@@ -3,6 +3,8 @@
 @use 'blocks/our-services';
 @use 'blocks/advantages';
 @use 'blocks/about-us';
+@use 'blocks/lead';
+@use 'blocks/footer';
 
 @font-face {
     font-family: 'Raleway';
@@ -22,4 +24,14 @@
 
 html {
     font-family: Raleway;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.span-bold {
+    font-weight: 700;
 }

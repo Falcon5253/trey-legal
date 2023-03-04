@@ -190,7 +190,6 @@ header {
   margin-top: 50px;
   background-color: #a28038;
   border: none;
-  color: black;
   text-decoration: none;
   height: 50px;
   min-height: 50px;
@@ -211,7 +210,6 @@ header {
 .our-services__title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 28px;
 }
 .our-services__list {
   width: 1720px;
@@ -256,13 +254,11 @@ header {
 .advantages__title {
   padding-top: 90px;
   padding-bottom: 30px;
-  font-size: 36px;
-  letter-spacing: 3px;
-  font-weight: 700;
 }
 .advantages__text {
   line-height: 1.4;
-  font-size: 30px;
+  font-size: 28px;
+  font-weight: lighter;
   letter-spacing: 1px;
   padding-bottom: 100px;
 }
@@ -306,10 +302,9 @@ header {
   color: white;
   width: -moz-fit-content;
   width: fit-content;
-  max-width: 400px;
+  max-width: 500px;
   padding: 5px 75px 5px 75px;
   text-transform: uppercase;
-  letter-spacing: 3px;
 }
 .shifted-article__img {
   height: 100%;
@@ -355,6 +350,124 @@ header {
   border-right: none;
 }
 
+.lead {
+  width: 100%;
+  background-image: url("../img/modern-office-corporate-building-low-angle-view-skyscrapers-city-singapore-panoramic-perspective-view-business-concept-success-industry-tech-architecture.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.lead__title {
+  background-color: rgba(12, 66, 167, 0.712);
+  margin: 0;
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.lead-form {
+  background-color: rgba(12, 66, 167, 0.712);
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding-left: calc((100% - 600px) / 2);
+  padding-right: calc((100% - 600px) / 2);
+  gap: 20px;
+}
+.lead-form__plane-text, .lead-form__textarea {
+  background: none;
+  border: 2px rgba(255, 255, 255, 0.4) solid;
+  border-radius: 2px;
+  padding-left: 20px;
+  color: white;
+}
+.lead-form__plane-text::-moz-placeholder, .lead-form__textarea::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.lead-form__plane-text::placeholder, .lead-form__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.lead-form__plane-text {
+  height: 40px;
+}
+.lead-form__textarea {
+  padding-top: 10px;
+}
+.lead-form__submit {
+  margin-top: 10px;
+  background-color: #a28038;
+  border: none;
+  text-decoration: none;
+  height: 50px;
+  min-height: 50px;
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.contacts_footer {
+  width: 100%;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.navigation_footer {
+  background-color: #DCDCDC;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.navigation__item_dark {
+  color: black;
+}
+
+.addresses {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.addresses__item span {
+  max-width: 320px;
+  display: block;
+  text-align: center;
+  line-height: 24px;
+}
+.addresses__country {
+  font-weight: 600;
+}
+
+.policies-line {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(44, 83, 134, 0.83);
+  height: 40px;
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  width: 1720px;
+  padding-left: calc((100% - 1720px) / 2);
+  padding-right: calc((100% - 1720px) / 2);
+}
+.policies-line__link {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+.policies-line__link:hover {
+  text-decoration: underline;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url("fonts/Raleway-VariableFont_wght.ttf");
@@ -371,6 +484,16 @@ header {
 }
 html {
   font-family: Raleway;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.span-bold {
+  font-weight: 700;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

@@ -1,0 +1,63 @@
+@use '../variables';
+
+.lead {
+    width: 100%;
+    background-image: url('../img/modern-office-corporate-building-low-angle-view-skyscrapers-city-singapore-panoramic-perspective-view-business-concept-success-industry-tech-architecture.jpg');
+    background-position: center;
+    background-size: cover;
+
+    &__title {
+        background-color: rgba(12, 66, 167, 0.712);
+        margin: 0;
+        text-align: center;
+        color: white;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-transform: uppercase;
+    }
+}
+
+.lead-form {
+    background-color: rgba(12, 66, 167, 0.712);
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    padding-left: calc((100% - 600px) / 2);
+    padding-right: calc((100% - 600px) / 2);
+    gap: 20px;
+
+    &__plane-text, &__textarea {
+        background: none;
+        border: 2px rgba(255, 255, 255, 0.4) solid;
+        border-radius: 2px;
+        padding-left: 20px;
+        color: white;
+    }
+
+    &__plane-text::placeholder, &__textarea::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &__plane-text {
+        height: 40px;
+    }
+
+    &__textarea {
+        padding-top: 10px;
+    }
+
+    &__submit {
+        margin-top: 10px;
+        background-color: variables.$orange;
+        border: none;
+        text-decoration: none;
+        height: 50px;
+        min-height: 50px;
+        width: 100%;
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+}

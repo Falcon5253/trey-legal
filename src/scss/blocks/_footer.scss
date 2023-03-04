@@ -1,0 +1,71 @@
+@use '../variables';
+
+.contacts {
+    &_footer {
+        width: 100%;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+.navigation {
+    &_footer {
+        background-color: #DCDCDC;
+        display: flex;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__item_dark {
+        color: black;
+    }
+}
+
+.addresses {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+
+    &__item {
+        span {
+            max-width: 320px;
+            display: block;
+            text-align: center;
+            line-height: 24px;
+        }
+    }
+
+    &__country {
+        font-weight: 600;
+    }
+}
+
+.policies-line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: variables.$blue;
+    height: 40px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    width: variables.$view-width;
+    padding-left: calc((100% - variables.$view-width) / 2);
+    padding-right: calc((100% - variables.$view-width) / 2);
+
+    &__link {
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+    }
+    &__link:hover {
+        text-decoration: underline;
+    }
+}
