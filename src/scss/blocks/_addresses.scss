@@ -1,0 +1,71 @@
+@use '../variables';
+
+.addresses {
+    width: variables.$view-width;
+    margin: auto 40px 100px auto;
+
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.address {
+    position: relative;
+    display: flex;
+
+    &__img, &__text {
+        width: 50%;
+    }
+
+    &__country, &__email {
+        font-weight: 700;
+    }
+
+    &__email {
+        margin-top: 25px;
+    }
+
+    &__text {
+        font-size: 18px;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        line-height: 24px;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -50px;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #CBAC78;
+    }
+
+    &:first-child {
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.bread-crumbs {
+    width: variables.$view-width;
+    margin: auto auto 10px auto;
+
+    &__devider {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 75px;
+    }
+}

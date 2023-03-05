@@ -1,4 +1,4 @@
-header {
+.header_main {
   background-image: url("../img/skyscraper-urban-view.jpg");
   background-position: center;
   background-size: cover;
@@ -428,7 +428,7 @@ header {
   color: black;
 }
 
-.addresses {
+.footer-addresses {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -436,13 +436,13 @@ header {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.addresses__item span {
+.footer-addresses__item span {
   max-width: 320px;
   display: block;
   text-align: center;
   line-height: 24px;
 }
-.addresses__country {
+.footer-addresses__country {
   font-weight: 600;
 }
 
@@ -468,6 +468,80 @@ header {
   text-decoration: underline;
 }
 
+.contacts-article {
+  width: 1720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contacts-article__title {
+  color: rgba(44, 83, 134, 0.83);
+}
+.contacts-article__text {
+  font-weight: 500;
+  font-size: 20px;
+  color: #555555;
+}
+
+.addresses {
+  width: 1720px;
+  margin: auto 40px 100px auto;
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.address {
+  position: relative;
+  display: flex;
+}
+.address__img, .address__text {
+  width: 50%;
+}
+.address__country, .address__email {
+  font-weight: 700;
+}
+.address__email {
+  margin-top: 25px;
+}
+.address__text {
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  line-height: 24px;
+}
+.address::before {
+  position: absolute;
+  content: "";
+  top: -50px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #CBAC78;
+}
+.address:first-child::before {
+  display: none;
+}
+
+.bread-crumbs {
+  width: 1720px;
+  margin: auto auto 10px auto;
+}
+.bread-crumbs__devider {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 75px;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url("fonts/Raleway-VariableFont_wght.ttf");
@@ -488,8 +562,9 @@ html {
 
 h2 {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 
 .span-bold {

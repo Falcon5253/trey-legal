@@ -1,11 +1,16 @@
 @use '../variables';
 
-header {
-    background-image: url("../img/skyscraper-urban-view.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    max-height: 1080px;
+.header {
+    &_main {
+        background-image: url("../img/skyscraper-urban-view.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        max-height: 1080px;
+    }
+    
+
+    
 }
 
 .header-info {
