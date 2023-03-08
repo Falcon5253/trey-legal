@@ -3,18 +3,22 @@
 $img-width: 400px;
 
 .article {
-    width: variables.$view-width;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
 
     &__title {
         color: variables.$blue;
+        width: variables.$view-width;
+        margin-right: auto;
+        margin-left: auto;
     }
     &__text {
         font-weight: 500;
         font-size: 20px;
         color: variables.$dark;
         line-height: 1.25;
+        width: variables.$view-width;
+        margin-right: auto;
+        margin-left: auto;
     }
     &__img {
         width: $img-width;
@@ -27,11 +31,12 @@ $img-width: 400px;
         flex-wrap: nowrap;
         align-items: flex-start;
         height: max-content;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        width: variables.$view-width;
+        margin: 50px auto 50px auto;
 
         p {
             width: calc(100% - $img-width);
+            padding: 0;
         }
     }
 }
