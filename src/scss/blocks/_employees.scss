@@ -1,0 +1,98 @@
+@use '../variables';
+
+
+
+$img-size: 225px;
+$img-margin: 30px;
+$card-width: 800px;
+
+.employees {
+    padding-left: 0;
+    list-style-type: none;
+    width: variables.$view-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: $card-width $card-width;
+    row-gap: 50px;
+    column-gap: calc(variables.$view-width - 2 * $card-width);
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.employee {
+    position: relative;
+    width: $card-width;
+    background-color: #C9C9C9;
+    display: grid;
+    grid-template-areas:
+    "img title"
+    "img description";
+    grid-template-rows: 1fr 1.5fr;
+    grid-template-columns: calc($img-size + $img-margin * 2) fit-content;
+
+    &::before {
+        content: "";
+        display: block;
+        width: $img-size + 25px;
+        height: $img-size + 25px;
+        border: 2px solid white;
+        background-color: #C9C9C9;
+        align-self: center;
+        justify-self: center;
+        border-radius: calc(($img-size + 25px) / 2);
+        z-index: 2;
+    }
+
+    &__img {
+        width: $img-size;
+        height: $img-size;
+        object-fit: cover;
+        border-radius: calc($img-size / 2);
+        z-index: 3;
+    }
+
+    &::after {
+        z-index: 1;
+        content: "";
+        display: block;
+        width: calc($card-width - $img-size - $img-margin);
+        right: 0;
+        height: 0px;
+        border: 1px solid white;
+        align-self: center;
+        justify-self: center;
+        position: absolute;
+        top: calc(10px + $img-size / 2);
+    }
+
+    &::before, &__img {
+        grid-area: img;
+        align-self: center;
+        justify-self: center;
+        margin: $img-margin;
+    }
+
+
+
+    &__title {
+        font-weight: 700;
+        margin-top: 30px;
+        color: variables.$blue;
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    &__job-title {
+        font-style: italic;
+        font-weight: 400;
+        font-size: 20px;
+        color: variables.$dark;
+        text-transform: lowercase;
+    }
+
+    &__description {
+        font-size: 20px;
+        padding-right: 20px;
+    }
+}

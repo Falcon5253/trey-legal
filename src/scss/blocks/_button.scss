@@ -1,0 +1,22 @@
+@use '../variables';
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: variables.$orange;
+    width: 320px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+    &_transparent {
+        color: variables.$orange;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border: 1px solid variables.$orange;
+        background-color: white;
+    }
+}

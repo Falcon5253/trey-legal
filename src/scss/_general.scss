@@ -5,8 +5,11 @@
 @use 'blocks/about-us';
 @use 'blocks/lead';
 @use 'blocks/footer';
-@use 'blocks/contacts';
+@use 'blocks/article';
 @use 'blocks/addresses';
+@use 'blocks/news';
+@use 'blocks/button';
+@use 'blocks/employees';
 
 @font-face {
     font-family: 'Raleway';
@@ -26,6 +29,7 @@
 
 html {
     font-family: Raleway;
+    color: #555555;
 }
 
 h2 {

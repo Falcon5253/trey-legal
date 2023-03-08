@@ -468,23 +468,41 @@
   text-decoration: underline;
 }
 
-.contacts-article {
+.article {
   width: 1720px;
   margin-left: auto;
   margin-right: auto;
 }
-.contacts-article__title {
+.article__title {
   color: rgba(44, 83, 134, 0.83);
 }
-.contacts-article__text {
+.article__text {
   font-weight: 500;
   font-size: 20px;
   color: #555555;
+  line-height: 1.25;
+}
+.article__img {
+  width: 400px;
+}
+.article__text-with-img {
+  display: flex;
+  gap: 50px;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  height: -moz-max-content;
+  height: max-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.article__text-with-img p {
+  width: calc(100% - 400px);
 }
 
 .addresses {
   width: 1720px;
-  margin: auto 40px 100px auto;
+  margin: 40px auto 100px auto;
   list-style-type: none;
   padding-left: 0;
   margin-top: 100px;
@@ -534,12 +552,175 @@
 .bread-crumbs {
   width: 1720px;
   margin: auto auto 10px auto;
+  margin-top: 50px;
 }
 .bread-crumbs__devider {
   display: inline-block;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 75px;
+}
+
+.news {
+  display: grid;
+  width: 1720px;
+  margin: 0 auto 75px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.new {
+  width: 460px;
+  margin-top: 50px;
+  position: relative;
+}
+.new__img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 420px;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.new::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 270px;
+  position: absolute;
+  outline: 1px solid #a28038;
+}
+.new__title, .new__date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  outline: 1px solid #a28038;
+}
+.new__title {
+  background-color: #a28038;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+}
+.new__text {
+  width: 100%;
+  font-weight: 500;
+}
+.new__description {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+.new__link {
+  color: #a28038;
+  font-style: italic;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a28038;
+  width: 320px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+.button_transparent {
+  color: #a28038;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid #a28038;
+  background-color: white;
+}
+
+.employees {
+  padding-left: 0;
+  list-style-type: none;
+  width: 1720px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 800px 800px;
+  row-gap: 50px;
+  -moz-column-gap: 120px;
+       column-gap: 120px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.employee {
+  position: relative;
+  width: 800px;
+  background-color: #C9C9C9;
+  display: grid;
+  grid-template-areas: "img title" "img description";
+  grid-template-rows: 1fr 1.5fr;
+  grid-template-columns: 285px fit-content;
+}
+.employee::before {
+  content: "";
+  display: block;
+  width: 250px;
+  height: 250px;
+  border: 2px solid white;
+  background-color: #C9C9C9;
+  align-self: center;
+  justify-self: center;
+  border-radius: 125px;
+  z-index: 2;
+}
+.employee__img {
+  width: 225px;
+  height: 225px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 112.5px;
+  z-index: 3;
+}
+.employee::after {
+  z-index: 1;
+  content: "";
+  display: block;
+  width: 545px;
+  right: 0;
+  height: 0px;
+  border: 1px solid white;
+  align-self: center;
+  justify-self: center;
+  position: absolute;
+  top: 122.5px;
+}
+.employee::before, .employee__img {
+  grid-area: img;
+  align-self: center;
+  justify-self: center;
+  margin: 30px;
+}
+.employee__title {
+  font-weight: 700;
+  margin-top: 30px;
+  color: rgba(44, 83, 134, 0.83);
+  font-size: 24px;
+  line-height: 1.5;
+}
+.employee__job-title {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  color: #555555;
+  text-transform: lowercase;
+}
+.employee__description {
+  font-size: 20px;
+  padding-right: 20px;
 }
 
 @font-face {
@@ -558,6 +739,7 @@
 }
 html {
   font-family: Raleway;
+  color: #555555;
 }
 
 h2 {

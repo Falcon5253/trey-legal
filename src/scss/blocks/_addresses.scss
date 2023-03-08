@@ -2,8 +2,7 @@
 
 .addresses {
     width: variables.$view-width;
-    margin: auto 40px 100px auto;
-
+    margin: 40px auto 100px auto;
     list-style-type: none;
     padding-left: 0;
     margin-top: 100px;
@@ -61,11 +60,12 @@
 .bread-crumbs {
     width: variables.$view-width;
     margin: auto auto 10px auto;
+    margin-top: 50px;
 
     &__devider {
         display: inline-block;
         margin-left: 10px;
         margin-right: 10px;
-        margin-top: 75px;
+        
     }
 }
