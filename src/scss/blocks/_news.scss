@@ -68,4 +68,8 @@ $new-width: 460px;
         color: variables.$orange;
         font-style: italic;
     }
+
+    &__link:hover {
+        cursor: pointer;
+    }
 }

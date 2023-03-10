@@ -1,14 +1,5 @@
 @use '../variables';
 
-.articles-list {
-    margin-top: 100px;
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
 .shifted-article {
     display: flex;
     position: relative;
@@ -22,11 +13,15 @@
     gap: 100px;
     
     &__text {
-        width: 50%;
+        width: 51%;
     }
 
     &__description {
         max-width: 760px;
+        margin-top: 50px;
+        padding-left: 75px;
+        padding-right: 75px;
+        line-height: 1.75;
     }
 
     &__title {
@@ -41,49 +36,45 @@
 
     &__img {
         height: 100%;
-        width: calc(50% - 100px);
+        width: calc(49% - 100px);
         object-fit: cover;
     }
 
     &::after {
         content: "";
-        border: variables.$orange 2px solid;
+        border: variables.$orange 1px solid;
         z-index: 100;
         top: -20px;
         left: 0px;
         display: block;
         position: absolute;
         height: 100%;
-        width: calc(50% + 5px);
+        width: calc(50%);
         border-left: none;
     }
 
-    &__description {
-        margin-top: 50px;
-        padding-left: 75px;
-        padding-right: 75px;
-        line-height: 1.75;
-    }
+    &_swap-by-one {
+        &:nth-child(even) {
+            text-align: right;
+            flex-direction: row;
+            justify-content: flex-end;
     
-    &:nth-child(even) {
-        text-align: right;
-        flex-direction: row;
-        justify-content: flex-end;
+            .shifted-article__title {
+                margin-left: auto;
+                margin-right: 0;
+            }
+    
+            .shifted-article__description {
+                margin-left: auto;
+                margin-right: 0;
+            }
+            &::after {
+                left: auto;
+                right: 0px;
+                border-left: 1px solid variables.$orange;
+                border-right: none;
+            }
+        }
+    }
 
-        .shifted-article__title {
-            margin-left: auto;
-            margin-right: 0;
-        }
-
-        .shifted-article__description {
-            margin-left: auto;
-            margin-right: 0;
-        }
-        &::after {
-            left: auto;
-            right: 0px;
-            border-left: 2px solid variables.$orange;
-            border-right: none;
-        }
-    }   
 }

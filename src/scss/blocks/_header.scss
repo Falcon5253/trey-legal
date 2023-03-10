@@ -16,8 +16,8 @@
     display: flex;
     justify-content: space-between;
     width: variables.$view-width;
-    padding-left: calc((100% - variables.$view-width) / 2);
-    padding-right: calc((100% - variables.$view-width) / 2);
+    padding-left: variables.$default-padding;
+    padding-right: variables.$default-padding;
 
     &__links {
         display: flex;
@@ -117,8 +117,8 @@
     display: flex;
     justify-content: space-between;
     width: variables.$view-width;
-    padding-left: calc((100% - variables.$view-width) / 2);
-    padding-right: calc((100% - variables.$view-width) / 2);
+    padding-left: variables.$default-padding;
+    padding-right: variables.$default-padding;
     align-items: center;
 
     &__services-button, &__item, &__lead-button {
@@ -130,6 +130,10 @@
         height: 35px;
         text-transform: uppercase;
         width: 150px;
+    }
+
+    &__item {
+        height: 100%;
     }
 
     &__services-button {
@@ -174,7 +178,7 @@
         max-height: 820px;
         padding: 50px 50px 0;
         width: calc(variables.$view-width / 2);
-        padding-left: calc((100% - variables.$view-width) / 2);
+        padding-left: variables.$default-padding;
         display: flex;
         flex-direction: column;
     }

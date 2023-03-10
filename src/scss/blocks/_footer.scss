@@ -56,8 +56,8 @@
     padding-left: 0;
     margin-bottom: 0;
     width: variables.$view-width;
-    padding-left: calc((100% - variables.$view-width) / 2);
-    padding-right: calc((100% - variables.$view-width) / 2);
+    padding-left: variables.$default-padding;
+    padding-right: variables.$default-padding;
 
     &__link {
         color: white;

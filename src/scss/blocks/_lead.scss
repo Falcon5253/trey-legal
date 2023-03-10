@@ -1,6 +1,7 @@
 @use '../variables';
 
 .lead {
+    margin-top: 50px;
     width: 100%;
     background-image: url('../img/modern-office-corporate-building-low-angle-view-skyscrapers-city-singapore-panoramic-perspective-view-business-concept-success-industry-tech-architecture.jpg');
     background-position: center;
@@ -24,7 +25,7 @@
         margin-right: auto;
     }
 
-    &__alpha {
+    &__wrapper {
         display: flex;
         flex-direction: column;
         gap: 25px;
@@ -33,22 +34,6 @@
         background-color: rgba(12, 66, 167, 0.712);
         height: 100%;
         width: 100%;
-    }
-
-    &__button {
-        display: block;
-        margin: 0 auto 0 auto;
-        background-color: variables.$orange;
-        border: none;
-        text-decoration: none;
-        height: 50px;
-        min-height: 50px;
-        color: white;
-        font-weight: 600;
-        font-size: 18px;
-        text-transform: uppercase;
-        padding-left: 100px;
-        padding-right: 100px;
     }
 }
 
@@ -93,6 +78,5 @@
         font-weight: 600;
         font-size: 18px;
         text-transform: uppercase;
-        margin-bottom: 50px;
     }
 }
