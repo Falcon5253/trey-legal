@@ -1,0 +1,90 @@
+@use '../variables';
+
+$img-width: 575px;
+$img-height: 400px;
+
+.service-details {
+    min-height: calc($img-height + 50px);
+    position: relative;
+    padding-top: 25x;
+
+    &__img {
+        height: 400px;
+        width: calc($img-width + variables.$default-padding);
+        float: left;
+        object-fit: cover;
+        margin: 25px 220px 25px 0;
+    }
+
+    &__title {
+        font-size: 24px;
+        text-transform: none;
+        letter-spacing: 1px;
+        margin-top: 25px;
+        margin-bottom: 60px;
+    }
+
+    &__page-number {
+        font-size: 40px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: #D3D3D3;
+        position: absolute;
+        top: -10px;
+        right: variables.$default-padding;
+    }
+
+    &__devider {
+        position: absolute;
+        display: block;
+        width: calc(variables.$view-width / 2 + 65px);
+        margin-right: variables.$default-padding;
+        height: 2px;
+        background-color: #D3D3D3;
+        top: 45px;
+        left: calc(0px + variables.$default-padding + $img-width + 220px);
+        right: variables.$default-padding;
+    }
+
+    &__description {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.25;
+        width: variables.$view-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &::before {
+        letter-spacing: 1px;
+        top: 25px + 100px;
+        right: calc(variables.$default-padding + variables.$view-width - $img-width - 110px);
+        position: absolute;
+        content: attr(service-title);
+        display: block;
+        text-align: center;
+        color: white;
+        background-color: variables.$orange;
+        font-weight: 600;
+        font-size: 24px;
+        padding-left: 50px;
+        padding-right: 50px;
+        line-height: 50px;
+        margin: 0;
+        max-width: 450px;
+        min-width: 300px;
+        text-transform: uppercase;
+    }
+
+    &::after {
+        content: "";
+        border: variables.$orange 1px solid;
+        z-index: 100;
+        top: 5px;
+        left: 0px;
+        display: block;
+        position: absolute;
+        height: 400px;
+        width: calc(variables.$default-padding + $img-width + 80px);
+        border-left: none;
+    }
+}

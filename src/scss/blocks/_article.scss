@@ -73,7 +73,9 @@ $img-width: 400px;
         width: variables.$view-width;
         margin-right: auto;
         margin-left: auto;
+        position: relative;
     }
+
     &__text {
         font-weight: 500;
         font-size: 20px;
@@ -83,6 +85,7 @@ $img-width: 400px;
         margin-right: auto;
         margin-left: auto;
     }
+
     &__img {
         width: $img-width;
     }
