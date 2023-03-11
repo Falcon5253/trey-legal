@@ -6,7 +6,7 @@ $img-height: 400px;
 .service-details {
     min-height: calc($img-height + 50px);
     position: relative;
-    padding-top: 25x;
+    padding-top: 25px;
 
     &__img {
         height: 400px;
@@ -21,7 +21,7 @@ $img-height: 400px;
         text-transform: none;
         letter-spacing: 1px;
         margin-top: 25px;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
     }
 
     &__page-number {
@@ -34,15 +34,20 @@ $img-height: 400px;
     }
 
     &__devider {
-        position: absolute;
         display: block;
-        width: calc(variables.$view-width / 2 + 65px);
-        margin-right: variables.$default-padding;
+        width: calc(variables.$view-width - $img-width - 220px);
+        margin-left: calc($img-width + variables.$default-padding + 220px);
         height: 2px;
         background-color: #D3D3D3;
-        top: 45px;
-        left: calc(0px + variables.$default-padding + $img-width + 220px);
         right: variables.$default-padding;
+    }
+
+    &__devider_for-list {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        margin-left: 0;
+        bottom: -15px;
     }
 
     &__description {
@@ -52,6 +57,30 @@ $img-height: 400px;
         width: variables.$view-width;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    &__points {
+        counter-reset: item;
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 50px;
+    }
+
+    &__point {
+        line-height: 40px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 24px;
+        color: black;
+        margin: 0 0 25px 0;
+        width: calc(100% - $img-width - variables.$default-padding * 2 - 220px);
+    }
+
+    &__point-text {
+        display: block;
+        max-width: 800px;
     }
 
     &::before {
@@ -70,9 +99,10 @@ $img-height: 400px;
         padding-right: 50px;
         line-height: 50px;
         margin: 0;
-        max-width: 450px;
+        max-width: 700px;
         min-width: 300px;
         text-transform: uppercase;
+        width: max-content;
     }
 
     &::after {
@@ -87,4 +117,59 @@ $img-height: 400px;
         width: calc(variables.$default-padding + $img-width + 80px);
         border-left: none;
     }
+
+    &:nth-child(even) {
+        & li::before {
+            display: inline-block;
+            content: "0" counter(item);
+            counter-increment: item;
+            font-size: 40px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #D3D3D3;
+            right: variables.$default-padding;
+        }
+
+        & li {
+            text-align: right;
+        }
+
+        .service-details__point {
+            margin-left: variables.$default-padding;
+        }
+
+        & img {
+            float: right;
+            object-fit: cover;
+            margin: 25px 0 25px 220px;
+        }
+
+        &::before {
+            left: calc(variables.$default-padding + variables.$view-width - $img-width - 110px);
+
+        }
+
+        &::after {
+            right: 0px;
+            left: auto;
+            border-left: variables.$orange 1px solid;
+            border-right: none;
+        }
+    }
+
+    &:nth-child(odd) {
+        & li::after {
+            display: inline-block;
+            content: "0" counter(item);
+            counter-increment: item;
+            font-size: 40px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: #D3D3D3;
+            right: variables.$default-padding;
+        }
+    }
+}
+
+.service-list {
+    list-style-type: none;
+    padding-left: 0;
 }
