@@ -15,7 +15,7 @@ $img-width: 400px;
         width: 400px;
         display: block;
         align-self: flex-end;
-        margin-right: calc(variables.$default-padding - 200px + ((1200px - 75px) / 2));
+        margin-right: calc(variables.$large-padding - 200px + ((1200px - 75px) / 2));
     }
 
     &__pagination {
@@ -26,7 +26,7 @@ $img-width: 400px;
 .pagination {
     display: flex;
     align-self: flex-end;
-    margin-right: variables.$default-padding;
+    margin-right: variables.$large-padding;
 
     & > a, & > span {
         font-size: 24px;
@@ -70,7 +70,7 @@ $img-width: 400px;
 
     &__title {
         color: variables.$blue;
-        width: variables.$view-width;
+        width: variables.$large-width;
         margin-right: auto;
         margin-left: auto;
         position: relative;
@@ -81,7 +81,7 @@ $img-width: 400px;
         font-size: 20px;
         color: variables.$dark;
         line-height: 1.25;
-        width: variables.$view-width;
+        width: variables.$large-width;
         margin-right: auto;
         margin-left: auto;
     }
@@ -97,7 +97,7 @@ $img-width: 400px;
         flex-wrap: nowrap;
         align-items: flex-start;
         height: max-content;
-        width: variables.$view-width;
+        width: variables.$large-width;
         margin: 50px auto 50px auto;
 
         p {
@@ -109,7 +109,7 @@ $img-width: 400px;
 
 .shifted-article {
     &_compact {
-        width: calc(100% - (100vw - variables.$view-width) / 2);
+        width: calc(100% - (100vw - variables.$large-width) / 2);
         height: min-content;
         gap: 0;
         justify-content: flex-end;

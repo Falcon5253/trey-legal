@@ -5,7 +5,7 @@ $new-width: 460px;
 
 .news {
     display: grid;
-    width: variables.$view-width;
+    width: variables.$large-width;
     margin: 0 auto 75px auto;
     display: flex;
     justify-content: space-between;

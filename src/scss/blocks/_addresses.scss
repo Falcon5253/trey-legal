@@ -1,7 +1,7 @@
 @use '../variables';
 
 .addresses {
-    width: variables.$view-width;
+    width: variables.$large-width;
     margin: 40px auto 100px auto;
     list-style-type: none;
     padding-left: 0;
@@ -58,7 +58,7 @@
 }
 
 .bread-crumbs {
-    width: variables.$view-width;
+    width: variables.$large-width;
     margin: auto auto 10px auto;
     margin-top: 50px;
 

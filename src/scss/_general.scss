@@ -43,3 +43,11 @@ h2, h1 {
 .span-bold {
     font-weight: 700;
 }
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    overflow: hidden;
+}

@@ -10,7 +10,7 @@ $img-height: 400px;
 
     &__img {
         height: 400px;
-        width: calc($img-width + variables.$default-padding);
+        width: calc($img-width + variables.$large-padding);
         float: left;
         object-fit: cover;
         margin: 25px 220px 25px 0;
@@ -30,16 +30,16 @@ $img-height: 400px;
         color: #D3D3D3;
         position: absolute;
         top: -10px;
-        right: variables.$default-padding;
+        right: variables.$large-padding;
     }
 
     &__devider {
         display: block;
-        width: calc(variables.$view-width - $img-width - 220px);
-        margin-left: calc($img-width + variables.$default-padding + 220px);
+        width: calc(variables.$large-width - $img-width - 220px);
+        margin-left: calc($img-width + variables.$large-padding + 220px);
         height: 2px;
         background-color: #D3D3D3;
-        right: variables.$default-padding;
+        right: variables.$large-padding;
     }
 
     &__devider_for-list {
@@ -54,7 +54,7 @@ $img-height: 400px;
         font-size: 18px;
         font-weight: 500;
         line-height: 1.25;
-        width: variables.$view-width;
+        width: variables.$large-width;
         margin-left: auto;
         margin-right: auto;
     }
@@ -75,7 +75,7 @@ $img-height: 400px;
         font-size: 24px;
         color: black;
         margin: 0 0 25px 0;
-        width: calc(100% - $img-width - variables.$default-padding * 2 - 220px);
+        width: calc(100% - $img-width - variables.$large-padding * 2 - 220px);
     }
 
     &__point-text {
@@ -86,7 +86,7 @@ $img-height: 400px;
     &::before {
         letter-spacing: 1px;
         top: 25px + 100px;
-        right: calc(variables.$default-padding + variables.$view-width - $img-width - 110px);
+        right: calc(variables.$large-padding + variables.$large-width - $img-width - 110px);
         position: absolute;
         content: attr(service-title);
         display: block;
@@ -114,7 +114,7 @@ $img-height: 400px;
         display: block;
         position: absolute;
         height: 400px;
-        width: calc(variables.$default-padding + $img-width + 80px);
+        width: calc(variables.$large-padding + $img-width + 80px);
         border-left: none;
     }
 
@@ -126,7 +126,7 @@ $img-height: 400px;
             font-size: 40px;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             color: #D3D3D3;
-            right: variables.$default-padding;
+            right: variables.$large-padding;
         }
 
         & li {
@@ -134,7 +134,7 @@ $img-height: 400px;
         }
 
         .service-details__point {
-            margin-left: variables.$default-padding;
+            margin-left: variables.$large-padding;
         }
 
         & img {
@@ -144,7 +144,7 @@ $img-height: 400px;
         }
 
         &::before {
-            left: calc(variables.$default-padding + variables.$view-width - $img-width - 110px);
+            left: calc(variables.$large-padding + variables.$large-width - $img-width - 110px);
 
         }
 
@@ -164,7 +164,7 @@ $img-height: 400px;
             font-size: 40px;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             color: #D3D3D3;
-            right: variables.$default-padding;
+            right: variables.$large-padding;
         }
     }
 }

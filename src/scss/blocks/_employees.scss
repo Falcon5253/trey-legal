@@ -9,13 +9,13 @@ $card-width: 800px;
 .employees {
     padding-left: 0;
     list-style-type: none;
-    width: variables.$view-width;
+    width: variables.$large-width;
     margin-left: auto;
     margin-right: auto;
     display: grid;
     grid-template-columns: $card-width $card-width;
     row-gap: 50px;
-    column-gap: calc(variables.$view-width - 2 * $card-width);
+    column-gap: calc(variables.$large-width - 2 * $card-width);
     margin-top: 50px;
     margin-bottom: 100px;
 }

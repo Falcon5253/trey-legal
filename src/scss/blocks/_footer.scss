@@ -3,6 +3,7 @@
 .contacts {
     &_footer {
         width: 100%;
+        display: flex;
         justify-content: center;
         gap: 30px;
         margin-bottom: 20px;
@@ -55,9 +56,9 @@
     list-style-type: none;
     padding-left: 0;
     margin-bottom: 0;
-    width: variables.$view-width;
-    padding-left: variables.$default-padding;
-    padding-right: variables.$default-padding;
+    width: variables.$large-width;
+    padding-left: variables.$large-padding;
+    padding-right: variables.$large-padding;
 
     &__link {
         color: white;
@@ -66,5 +67,21 @@
     }
     &__link:hover {
         text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 1820px) {
+    .policies-line {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navigation {
+        &_footer {
+            display: none;
+        }
     }
 }

@@ -9,8 +9,7 @@
     margin-top: 50px;
 
     &__title {
-        padding-top: 90px;
-        padding-bottom: 30px;
+        margin-bottom: 30px;
     }
 
     &__text {
@@ -21,10 +20,47 @@
         padding-bottom: 100px;
     }
 
-    &__title, &__text {
-        margin: 0;
-        padding-left: variables.$default-padding;
-        padding-right: variables.$default-padding;
+    &__wrapper {
+        width: 100%;
         background-color: rgba(12, 66, 167, 0.712);
+        padding-top: 50px;
+    }
+
+    &__title, &__text {
+        width: variables.$large-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 1820px) {
+    .advantages {
+        &__title, &__text {
+            width: variables.$default-width;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .advantages {
+        &__title, &__text {
+            width: variables.$medium-width;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .advantages {
+        &__title, &__text {
+            width: variables.$small-width;
+        }
+
+        &__text {
+            font-size: 20px;
+        }
     }
 }

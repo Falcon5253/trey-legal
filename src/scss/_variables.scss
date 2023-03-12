@@ -1,5 +1,24 @@
+// Цвета
 $blue: rgba(44, 83, 134, 0.83);
 $orange: #a28038;
-$view-width: 1720px;
 $dark: #555555;
-$default-padding: calc((100% - $view-width) / 2);
+
+// Все остальные
+$large-width: 1720px;
+$large-padding: calc((100vw - $large-width) / 2);
+
+// Меньше 1820px
+$default-width: 1350px;
+$default-padding: calc((100vw - $default-width) / 2);
+
+// Меньше 1480px
+$medium-width: 960px;
+$medium-padding: calc((100vw - $medium-width) / 2);
+
+// Меньше 768px
+$small-width: 720px;
+$small-padding: calc((100vw - $small-width) / 2);
+
+// Меньше
+$smallest-width: 300px;
+$smallest-padding: calc((100vw - $smallest-width) / 2);
