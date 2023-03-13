@@ -1440,9 +1440,12 @@
 .address {
   position: relative;
   display: flex;
+  gap: 20px;
 }
-.address__img, .address__text {
+.address__img {
   width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .address__country, .address__email {
   font-weight: 700;
@@ -1455,7 +1458,7 @@
   letter-spacing: 1px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  flex-grow: 2;
   justify-content: center;
   gap: 10px;
   margin-top: 30px;
@@ -1487,22 +1490,48 @@
 }
 
 @media screen and (max-width: 1820px) {
+  .addresses {
+    width: 1350px;
+  }
   .bread-crumbs {
     width: 1350px;
   }
 }
 @media screen and (max-width: 1440px) {
+  .addresses {
+    width: 960px;
+  }
   .bread-crumbs {
     width: 960px;
   }
 }
 @media screen and (max-width: 1024px) {
+  .addresses {
+    width: 720px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
   .bread-crumbs {
     width: 720px;
     margin-top: 20px;
   }
 }
 @media screen and (max-width: 768px) {
+  .addresses {
+    width: 95%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .address__country, .address__email {
+    font-weight: 600;
+  }
+  .address__email {
+    margin-top: 15px;
+  }
+  .address__text {
+    font-size: 14px;
+    gap: 0;
+  }
   .bread-crumbs {
     width: 95%;
     margin-left: auto;

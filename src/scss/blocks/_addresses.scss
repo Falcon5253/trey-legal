@@ -14,9 +14,11 @@
 .address {
     position: relative;
     display: flex;
+    gap: 20px;
 
-    &__img, &__text {
+    &__img {
         width: 50%;
+        object-fit: cover;
     }
 
     &__country, &__email {
@@ -32,7 +34,7 @@
         letter-spacing: 1px;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        flex-grow: 2;
         justify-content: center;
         gap: 10px;
         margin-top: 30px;
@@ -71,6 +73,9 @@
 }
 
 @media screen and (max-width: 1820px) {
+    .addresses {
+        width: variables.$default-width;
+    }
     .bread-crumbs {
         width: variables.$default-width;
     }
@@ -78,12 +83,20 @@
 
 
 @media screen and (max-width: 1440px) {
+    .addresses {
+        width: variables.$medium-width;
+    }
     .bread-crumbs {
         width: variables.$medium-width;
     }
 }
 
 @media screen and (max-width: 1024px) {
+    .addresses {
+        width: variables.$small-width;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
     .bread-crumbs {
         width: variables.$small-width;
         margin-top: 20px;
@@ -91,6 +104,28 @@
 }
 
 @media screen and (max-width: 768px) {
+    .addresses {
+        width: 95%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .address {
+    
+        &__country, &__email {
+            font-weight: 600;
+        }
+    
+        &__email {
+            margin-top: 15px;
+        }
+    
+        &__text {
+            font-size: 14px;
+            gap: 0;
+        }
+    }
+
     .bread-crumbs {
         width: 95%;
         margin-left: auto;
