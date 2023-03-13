@@ -106,6 +106,10 @@ $small-img-width: 150px;
         width: variables.$large-width;
         margin: 50px auto 50px auto;
 
+        &_img-right {
+            flex-direction: row-reverse;
+        }
+
         p {
             width: calc(100% - $large-img-width);
             padding: 0;
@@ -273,13 +277,21 @@ $small-img-width: 150px;
     
         &__img {
             width: $medium-img-width;
+            float: left;
+            margin: 20px 20px 20px 0;
         }
     
         &__text-with-img {
             width: variables.$medium-width;
+            display: block;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            .article__text {
+                width: 100%;
+
+            }
         }
-
-
     }
 
     .shifted-article {
@@ -323,14 +335,16 @@ $small-img-width: 150px;
         }
     
         &__img {
-            width: $small-img-width;
+            width: $medium-img-width;
         }
     
         &__text-with-img {
-            width: variables.$medium-width;
+            width: variables.$small-width;
+
+            .article__text {
+                width: 100%;
+            }
         }
-
-
     }
 
     .shifted-article {
@@ -384,14 +398,19 @@ $small-img-width: 150px;
         }
     
         &__img {
-            width: $small-img-width;
+            width: 50%;
+            margin: 10px 10px 10px 0;
         }
     
         &__text-with-img {
-            width: variables.$smallest-width;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+
+            .article__text {
+                width: 100%;
+            }
         }
-
-
     }
 
     .shifted-article {
@@ -434,7 +453,7 @@ $small-img-width: 150px;
     }
 
     .pagination {
-        margin-right: 5%;
+        margin-right: 2.5%;
         
         & > a {
             font-size: 20px;
