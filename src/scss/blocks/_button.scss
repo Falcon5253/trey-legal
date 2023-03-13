@@ -35,13 +35,11 @@
 
 @media screen and (max-width: 768px) {
     .button {
-        &_full-width {
-            padding-left: 0;
-            padding-right: 0;
-            height: 35px;
-        }
+        padding-left: 0;
+        padding-right: 0;
+        height: 35px;
+        width: 95%;
         min-height: auto;
         font-size: 14px;
-
     }
 }

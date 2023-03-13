@@ -81,9 +81,33 @@
     }
 }
 
+@media screen and (max-width: 1820px) {
+    .lead {
+        &__text {
+            width: variables.$default-width;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .lead {
+        &__text {
+            width: variables.$medium-width;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .lead {
+        &__text {
+            width: variables.$small-width;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     .lead {
-        margin-top: 50px;
+        margin-top: 10px;
         width: 100%;
         background-image: url('../img/modern-office-corporate-building-low-angle-view-skyscrapers-city-singapore-panoramic-perspective-view-business-concept-success-industry-tech-architecture.jpg');
         background-position: center;
@@ -91,6 +115,20 @@
     
         &__title {
             font-size: 21px;
+        }
+
+        &__wrapper {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            gap: 0px;
+        }
+
+        &__text {
+            width: 95%;
+            font-size: 14px;
+        }
+        .button {
+            margin-top: 15px;
         }
     }
 
