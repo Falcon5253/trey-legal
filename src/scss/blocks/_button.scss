@@ -41,5 +41,9 @@
         width: 95%;
         min-height: auto;
         font-size: 14px;
+        &_transparent {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
     }
 }

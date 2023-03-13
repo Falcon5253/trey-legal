@@ -1,10 +1,10 @@
 @use '../variables';
 
 $img-height: 270px;
-$new-width: 460px;
+$new-width-small: 460px;
+$new-width: 600px;
 
 .news {
-    display: grid;
     width: variables.$large-width;
     margin: 0 auto 75px auto;
     display: flex;
@@ -15,14 +15,14 @@ $new-width: 460px;
 }
 
 .new {
-    width: $new-width;
+    width: $new-width-small;
     margin-top: 50px;
     position: relative;
 
     &__img {
         margin-top: 10px;
         margin-bottom: 10px;
-        width: calc($new-width - 40px);
+        width: calc($new-width-small - 40px);
         height: $img-height;
         object-fit: cover;
     }
@@ -71,5 +71,67 @@ $new-width: 460px;
 
     &__link:hover {
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1820px) {
+    .news {
+        width: variables.$default-width;
+        justify-content: space-around;
+    }
+    
+    .new {
+        width: $new-width;
+        &__img {
+            width: calc($new-width - 40px);
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .news {
+        width: variables.$medium-width;
+    }
+
+    .new {
+        width: $new-width-small;
+        &__img {
+            width: calc($new-width-small - 40px);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .news {
+        width: variables.$small-width;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+
+    }
+
+    .new {
+        width: $new-width;
+        margin-top: 15px;
+        &__img {
+            width: calc($new-width - 20px);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .news {
+        width: 95%;
+        padding-top: 5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .new {
+        width: 100%;
+        margin-top: 0;
+        &__img {
+            width: calc(100% - 20px);
+        }
     }
 }

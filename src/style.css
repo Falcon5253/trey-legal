@@ -1567,7 +1567,6 @@
   }
 }
 .news {
-  display: grid;
   width: 1720px;
   margin: 0 auto 75px auto;
   display: flex;
@@ -1630,6 +1629,60 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 1820px) {
+  .news {
+    width: 1350px;
+    justify-content: space-around;
+  }
+  .new {
+    width: 600px;
+  }
+  .new__img {
+    width: 560px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .news {
+    width: 960px;
+  }
+  .new {
+    width: 460px;
+  }
+  .new__img {
+    width: 420px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .news {
+    width: 720px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+  }
+  .new {
+    width: 600px;
+    margin-top: 15px;
+  }
+  .new__img {
+    width: 580px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .news {
+    width: 95%;
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .new {
+    width: 100%;
+    margin-top: 0;
+  }
+  .new__img {
+    width: calc(100% - 20px);
+  }
+}
 .button {
   display: block;
   margin: 0px auto 0px auto;
@@ -1668,6 +1721,10 @@
     width: 95%;
     min-height: auto;
     font-size: 14px;
+  }
+  .button_transparent {
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 .employees {
