@@ -1677,17 +1677,17 @@
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  grid-template-columns: 800px 800px;
+  grid-template-columns: 1fr 1fr;
   row-gap: 50px;
-  -moz-column-gap: 120px;
-       column-gap: 120px;
+  -moz-column-gap: 60px;
+       column-gap: 60px;
   margin-top: 50px;
   margin-bottom: 100px;
 }
 
 .employee {
   position: relative;
-  width: 800px;
+  width: 830px;
   background-color: #C9C9C9;
   display: grid;
   grid-template-areas: "img title" "img description";
@@ -1718,7 +1718,7 @@
   z-index: 1;
   content: "";
   display: block;
-  width: 545px;
+  width: 575px;
   right: 0;
   height: 2px;
   background-color: white;
@@ -1752,6 +1752,75 @@
   padding-right: 20px;
 }
 
+@media screen and (max-width: 1820px) {
+  .employees {
+    width: 1350px;
+  }
+  .employee {
+    width: 645px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .employees {
+    width: 960px;
+    grid-template-columns: 1fr;
+  }
+  .employee {
+    width: 100%;
+  }
+  .employee::after {
+    width: calc(100% - 10px - 100px);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .employees {
+    width: 720px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .employees {
+    width: 95%;
+  }
+  .employee {
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: 140px 1fr;
+    grid-template-areas: "img title" "text text";
+  }
+  .employee__title {
+    font-size: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: center;
+    justify-self: start;
+  }
+  .employee__description {
+    font-size: 16px;
+    margin-top: 0;
+    grid-area: text;
+    margin-left: 10px;
+  }
+  .employee__img {
+    width: 100px;
+    height: 100px;
+    align-self: start;
+    justify-self: start;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  .employee::before {
+    align-self: start;
+    justify-self: start;
+    margin-left: auto;
+    margin-right: auto;
+    width: 110px;
+    height: 110px;
+    margin-top: 13px;
+  }
+  .employee::after {
+    display: none;
+  }
+}
 .service-details {
   min-height: 450px;
   position: relative;

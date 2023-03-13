@@ -3,8 +3,13 @@
 
 
 $img-size: 225px;
+$small-img-size: 100px;
 $img-margin: 30px;
-$card-width: 800px;
+$small-img-margin: 10px;
+$large-card-width: calc(variables.$large-width / 2 - 30px);
+$default-card-width: calc(variables.$default-width / 2 - 30px);
+$medium-card-width: calc(variables.$medium-width / 2 - 30px);
+$small-card-width: calc(variables.$small-width / 2 - 30px);
 
 .employees {
     padding-left: 0;
@@ -13,16 +18,16 @@ $card-width: 800px;
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: $card-width $card-width;
+    grid-template-columns: 1fr 1fr;
     row-gap: 50px;
-    column-gap: calc(variables.$large-width - 2 * $card-width);
+    column-gap: 60px;
     margin-top: 50px;
     margin-bottom: 100px;
 }
 
 .employee {
     position: relative;
-    width: $card-width;
+    width: $large-card-width;
     background-color: #C9C9C9;
     display: grid;
     grid-template-areas:
@@ -56,7 +61,7 @@ $card-width: 800px;
         z-index: 1;
         content: "";
         display: block;
-        width: calc($card-width - $img-size - $img-margin);
+        width: calc($large-card-width - $img-size - $img-margin);
         right: 0;
         height: 2px;
         background-color: white;
@@ -96,3 +101,98 @@ $card-width: 800px;
         padding-right: 20px;
     }
 }
+
+@media screen and (max-width: 1820px) {
+    .employees {
+        width: variables.$default-width;
+
+    }
+    
+    .employee {
+        width: $default-card-width;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .employees {
+        width: variables.$medium-width;
+
+        grid-template-columns: 1fr;
+    }
+        
+    .employee {
+        width: 100%;
+
+        &::after {
+            width: calc(100% - $small-img-margin - $small-img-size);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .employees {
+        width: variables.$small-width;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .employees {
+        width: 95%;
+        
+    }
+
+    .employee {
+        grid-template-columns: calc($small-img-size + $small-img-margin + 20px) 1fr;
+        grid-template-rows: calc($small-img-size + $small-img-margin * 2 + 20px) 1fr;
+        grid-template-areas: 'img title'
+        'text text';
+
+        &__title {
+            font-size: 21px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            align-self: center;
+            justify-self: start;
+        }
+
+        &__description {
+            font-size: 16px;
+            margin-top: 0;
+            grid-area: text;
+            margin-left: 10px;
+        }
+
+        &__img {
+            width: $small-img-size;
+            height: $small-img-size;
+            align-self: start;
+            justify-self: start;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: $small-img-margin + 10px;
+        }
+
+        &::before {
+            align-self: start;
+            justify-self: start;
+            margin-left: auto;
+            margin-right: auto;
+            width: $small-img-size + $small-img-margin;
+            height: $small-img-size + $small-img-margin;
+            margin-top: 13px;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+
+// @media screen and (max-width: 421px) {
+//     .employee {
+//         &::after {
+//             top: calc(40px + $small-img-size / 2);
+//         }
+//     }
+// }
