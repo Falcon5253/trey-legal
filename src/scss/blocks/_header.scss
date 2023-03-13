@@ -180,15 +180,15 @@
 
 .header-lead {
     width: 100%;
-    max-height: calc(1080px - 210px);
-    height: calc(100vh - 210px);
-    min-height: calc(640px - 210px);
+    max-height: calc(1080px - 220px);
+    height: calc(100vh - 220px);
+    min-height: calc(640px - 220px);
 
     &__background {
         background-color: rgba($color: variables.$blue, $alpha: 0.4);
-        max-height: calc(1080px - 210px - 50px);
-        height: calc(100vh - 210px - 50px);
-        min-height: calc(640px - 210px - 50px);
+        max-height: calc(1080px - 220px - 50px);
+        height: calc(100vh - 220px - 50px);
+        min-height: calc(640px - 220px - 50px);
         padding: 50px 50px 0 0;
         width: 50%;
         display: flex;
@@ -432,10 +432,8 @@
         &_main {
             max-height: auto;
         }
-
-        height: 510px;
-        min-height: auto;
-        max-height: auto;
+        
+        max-height: 510px;
     }
 
     .navigation {
@@ -515,6 +513,86 @@
             margin-top: 30px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        &__title::after {
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .header {
+        &_main {
+            max-height: 340px;
+        }
+
+        // height: 340px;
+        min-height: auto;
+    }
+
+    .header-info {
+        width: calc(100% - 20px);
+        padding-left: 20px;
+        height: 60px;
+
+        &__more-button {
+            display: block;
+            height: 100%;
+            background: none;
+            border: none;
+        }
+
+        &__more-button-img {
+            height: 100%;
+        }
+    }
+
+    .header-lead {
+        height: 280px;
+        min-height: auto;
+
+        &__background {
+            padding-top: 10px;
+            height: 280px;
+            width: 100%;
+            padding-top: 0;
+            padding-left: 0;
+        }
+    
+        &__title {
+            font-size: 21px;
+            text-transform: none;
+            flex-grow: 0;
+            max-height: 150px;
+            letter-spacing: 1px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        &__title, &__text {
+            text-align: center;
+            width: variables.$smallest-width;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__button {
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 35px;
+            width: 200px;
+            font-size: 14px;
+            min-height: auto;
+            max-height: auto;
         }
 
         &__title::after {

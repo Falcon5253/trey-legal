@@ -111,32 +111,36 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 
     .shifted-article {
         align-items: start;
-        gap: 15px;
+        gap: 7px;
         
         &__text {
-            width: 81%;
-            
+            width: 71%;
         }
 
         &__title {
             padding-left: 20px;
             padding-right: 20px;
+            font-size: 21px;
+            letter-spacing: 1px;
         }
 
         &__description {
-            padding-left: 25px;
-            padding-right: 25px;
+            padding-right: 15px;
+            padding-left: 15px;
+            font-size: 14px;
+            margin-top: 0px;
         }
 
         &__img {
-            width: calc(19% - 25px);
+            width: calc(29% - 10px);
         }
         &::after {
-            width: calc(19%);
+            width: calc(29%);
         }
     }
 }
+

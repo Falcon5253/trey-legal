@@ -1,6 +1,9 @@
 @use '../variables';
 
-$img-width: 400px;
+$large-img-width: 450px;
+$default-img-width: 450px;
+$medium-img-width: 250px;
+$small-img-width: 150px;
 
 .article-list {
     margin-top: 100px;
@@ -12,14 +15,17 @@ $img-width: 400px;
     gap: 50px;
 
     &__more-button {
-        width: 400px;
+        width: calc(100% - $large-img-width - 110px);
         display: block;
         align-self: flex-end;
-        margin-right: calc(variables.$large-padding - 200px + ((1200px - 75px) / 2));
     }
 
     &__pagination {
         font-size: 32px;
+    }
+
+    &_compact {
+        gap: 50px;
     }
 }
 
@@ -87,7 +93,7 @@ $img-width: 400px;
     }
 
     &__img {
-        width: $img-width;
+        width: $large-img-width;
     }
 
     &__text-with-img {
@@ -101,7 +107,7 @@ $img-width: 400px;
         margin: 50px auto 50px auto;
 
         p {
-            width: calc(100% - $img-width);
+            width: calc(100% - $large-img-width);
             padding: 0;
         }
     }
@@ -109,17 +115,18 @@ $img-width: 400px;
 
 .shifted-article {
     &_compact {
-        width: calc(100% - (100vw - variables.$large-width) / 2);
+        width: calc(100% - variables.$large-padding);
         height: min-content;
         gap: 0;
         justify-content: flex-end;
         align-items: flex-start;
         gap: 35px;
+        min-height: auto;
 
         .shifted-article__text {
-            width: 1200px;
-            min-width: 1200px;
             position: relative;
+            flex-grow: 1;
+            width: min-content
         }
 
         .shifted-article__text::after {
@@ -135,7 +142,7 @@ $img-width: 400px;
         }
 
         .shifted-article__description {
-            max-width: 1200px;
+            width: calc(100% - 75px);
             padding-right: 0;
             margin-top: 20px;
             font-weight: 500;
@@ -143,6 +150,7 @@ $img-width: 400px;
             color: variables.$dark;
             line-height: 1.5;
             font-weight: 400;
+            max-width: none;
         }
 
         .shifted-article__title {
@@ -177,7 +185,7 @@ $img-width: 400px;
         }
 
         .shifted-article__img {
-            flex-grow: 2;
+            width: calc(variables.$large-padding + $large-img-width);
             height: 300px;
         }
 
@@ -199,8 +207,244 @@ $img-width: 400px;
         }
 
         &::after {
-            width: calc(100% - 1185px);
+            width: calc(variables.$large-padding + $large-img-width + 50px);
             height: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 1820px) {
+    .article {
+
+        &__title {
+            width: variables.$default-width;
+        }
+    
+        &__text {
+            width: variables.$default-width;
+        }
+    
+        &__img {
+            width: $large-img-width;
+        }
+    
+        &__text-with-img {
+            width: variables.$default-width;
+        }
+    }
+
+    .shifted-article {
+        &_compact {
+            width: calc(100% - variables.$default-padding);
+
+            &__more-button {
+                width: calc(100% - $default-img-width - 110px);
+            }
+
+            .shifted-article__img {
+                width: calc(variables.$default-padding + $default-img-width);
+            }
+    
+            &::after {
+                width: calc(variables.$default-padding + $default-img-width + 50px);
+                height: 300px;
+            }
+            .shifted-article__description {
+                padding-left: 75px;
+                padding-right: 0;
+            }
+        }
+    }
+    .pagination {
+        margin-right: variables.$default-padding;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .article {
+
+        &__title {
+            width: variables.$medium-width;
+        }
+    
+        &__text {
+            width: variables.$medium-width;
+        }
+    
+        &__img {
+            width: $medium-img-width;
+        }
+    
+        &__text-with-img {
+            width: variables.$medium-width;
+        }
+
+
+    }
+
+    .shifted-article {
+        &_compact {
+            width: calc(100% - variables.$medium-padding);
+
+            .shifted-article__img {
+                width: calc(variables.$medium-padding + $medium-img-width);
+            }
+    
+            &::after {
+                width: calc(variables.$medium-padding + $medium-img-width + 50px);
+                height: 300px;
+            }
+            .shifted-article__description {
+                padding-left: 75px;
+                padding-right: 0;
+            }
+        }
+    }
+    .pagination {
+        margin-right: variables.$medium-padding;
+    }
+
+    .article-list {
+        &__more-button {
+            width: calc(100% - $medium-img-width - 110px);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .article {
+
+        &__title {
+            width: variables.$small-width;
+        }
+    
+        &__text {
+            width: variables.$small-width;
+        }
+    
+        &__img {
+            width: $small-img-width;
+        }
+    
+        &__text-with-img {
+            width: variables.$medium-width;
+        }
+
+
+    }
+
+    .shifted-article {
+        &_compact {
+            width: calc(100% - variables.$small-padding);
+
+            .shifted-article__img {
+                width: calc(variables.$small-padding + $small-img-width);
+            }
+    
+            &::after {
+                width: calc(variables.$small-padding + $small-img-width + 50px);
+                height: 300px;
+            }
+            .shifted-article__description {
+                padding-left: 75px;
+                padding-right: 0;
+            }
+        }
+    }
+    .pagination {
+        margin-right: variables.$small-padding;
+    }
+
+    .article-list {
+        &__more-button {
+            width: calc(100% - $small-img-width - 110px);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .article-list {
+        margin-top: 30px;
+    }
+
+    .article {
+
+        &__title {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 21px;
+        }
+    
+        &__text {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 14px;
+        }
+    
+        &__img {
+            width: $small-img-width;
+        }
+    
+        &__text-with-img {
+            width: variables.$smallest-width;
+        }
+
+
+    }
+
+    .shifted-article {
+        &_compact {
+            width: calc(100% - variables.$smallest-padding);
+            gap: 20px;
+
+            .shifted-article__img {
+                width: 20vw;
+            }
+    
+            &::after {
+                width: calc(20vw + 30px);
+                height: 300px;
+            }
+
+            .shifted-article__title-text, .shifted-article__title-date {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .shifted-article__description {
+                padding-left: 30px;
+                padding-right: 0;
+                width: variables.$small-width;
+                font-size: 14px;
+                width: calc(100vw - 20vw - 75px - 20px);
+            }
+
+            .shifted-article__text::after {
+                width: calc(100% - 30px);
+                margin-right: 5%;
+                margin-left: 30px;
+            }
+
+            .shifted-article__link {
+                margin-left: calc((100% - 30px) / 2 + 30px - 32px / 2);
+            }
+        }
+    }
+
+    .pagination {
+        margin-right: 5%;
+        
+        & > a {
+            font-size: 20px;
+            width: 20px;
+        }
+    }
+
+    .article-list {
+        &__more-button {
+            width: calc(100%);
         }
     }
 }

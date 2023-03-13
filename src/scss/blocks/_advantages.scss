@@ -64,3 +64,37 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .advantages {
+        min-height: auto;
+
+        &__title, &__text {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+            padding-right: 0;
+            
+            padding-bottom: 20px;
+        }
+
+        &__title {
+            font-size: 21px;
+            margin-top: 0px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            padding-top: 20px;
+        }
+
+        &__text {
+            font-size: 14px;
+            margin-top: 0;
+            padding-top: 10px;
+        }
+        
+        &__wrapper {
+            padding-top: 0;
+        }
+    }
+}
