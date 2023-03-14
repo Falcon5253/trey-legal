@@ -5,6 +5,7 @@ $big-img-width: 900px;
 $small-img-width: 375px;
 $img-height: 400px;
 $small-img-height: 250px;
+$point-width: calc(variables.$medium-padding + $big-img-width - 100px);
 
 .service-details {
     min-height: calc($img-height + 50px);
@@ -148,7 +149,6 @@ $small-img-height: 250px;
 
         &::before {
             left: calc(variables.$large-padding + variables.$large-width - $img-width - 110px);
-
         }
 
         &::after {
@@ -193,6 +193,14 @@ $small-img-height: 250px;
             margin-left: calc(variables.$default-padding + $small-img-width + 150px);
         }
 
+        &__devider_for-list {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            margin-left: 0;
+            bottom: -15px;
+        }
+
         &__img {
             width: calc($small-img-width + variables.$default-padding);
             margin-right: 150px;
@@ -204,6 +212,27 @@ $small-img-height: 250px;
         &::after {
             width: calc(variables.$default-padding + $small-img-width + 80px);
         }
+
+        &__point{
+            width: calc(variables.$default-width - $small-img-width - 150px);
+        }
+
+        &__point-text {
+            max-width: 75%;
+        }
+
+        &:nth-child(even) {
+            & li::before {
+                right: variables.$default-padding;
+            }
+    
+            .service-details__point {
+                margin-left: variables.$default-padding;
+            }
+            & img {
+                margin: 25px 0 25px 150px;
+            }
+        }    
     }
 }
 
@@ -238,13 +267,43 @@ $small-img-height: 250px;
             text-align: right;
         }
 
-        
         &__devider {
-            display: block;
             width: variables.$medium-width;
             margin-left: auto;
             margin-right: auto;
         }
+        
+        &__devider_for-list {
+            display: block;
+            width: $point-width;
+            margin-left: 0;
+        }
+
+        &__point{
+            width: calc(variables.$medium-padding + $big-img-width - 150px);
+            padding-left: 25px;
+
+        }
+
+        &:nth-child(even) {
+            & li::before {
+                right: variables.$default-padding;
+            }
+    
+            .service-details__point {
+
+                width: calc(variables.$medium-padding + $big-img-width - 150px);
+                margin-left: calc(100% - $point-width);
+                padding-right: 25px;
+                margin-right: 0;
+            }
+            & img {
+                margin: 25px 0 25px 150px;
+            }
+            &::before {
+                left: calc(variables.$default-padding + variables.$default-width - $big-img-width - 110px);
+            }
+        }  
     }
 }
 
@@ -262,10 +321,21 @@ $small-img-height: 250px;
         &__devider {
             width: variables.$small-width;
         }
+
+        &__devider_for-list {
+            width: $point-width;
+        }
+
     }
 }
 
 @media screen and (max-width: 768px) {
+    .service-list {
+        li {
+            margin-bottom: 50px;
+        }
+    }
+
     .service-details {
         &__description {
             font-size: 14px;
@@ -289,6 +359,15 @@ $small-img-height: 250px;
             margin-top: 0;
         }
 
+        &__devider {
+            width: 95%;
+        }
+
+        &__devider_for-list {
+            width: 100%;
+            bottom: 0px;
+        }
+
         &::after {
             width: calc(90% + 5%);
             height: $small-img-height;
@@ -308,6 +387,49 @@ $small-img-height: 250px;
             max-width: 250px;
             line-height: 1.5;
             height: auto;
+        }
+
+        &:nth-child(even) {
+            &::before {
+                left: 2%;
+                top: 75px;
+            }
+        }
+        
+        &__point {
+            font-size: 14px;
+            height: min-content;
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 0;
+        }
+
+        &:nth-child(odd) {
+            li::after {
+                font-size: 20px;
+            }
+        }
+
+        &:nth-child(even) {
+            li::before {
+                font-size: 20px;
+            }
+
+            .service-details__point {
+                font-size: 14px;
+                height: min-content;
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+                padding-right: 0;
+            }
+        }
+    }
+
+    .service-list {
+        li {
+            margin-bottom: 10px;
         }
     }
 }
