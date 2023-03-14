@@ -1903,7 +1903,7 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: #D3D3D3;
   position: absolute;
-  top: -10px;
+  top: 40px;
   right: calc((100vw - 1720px) / 2);
 }
 .service-details__devider {
@@ -2029,6 +2029,113 @@
   padding-left: 0;
 }
 
+@media screen and (max-width: 1820px) {
+  .service-details__description {
+    width: 1350px;
+  }
+  .service-details__page-number {
+    right: calc((100vw - 1350px) / 2);
+  }
+  .service-details__devider {
+    display: block;
+    width: 825px;
+    margin-left: calc((100vw - 1350px) / 2 + 375px + 150px);
+  }
+  .service-details__img {
+    width: calc(375px + (100vw - 1350px) / 2);
+    margin-right: 150px;
+  }
+  .service-details::before {
+    right: calc((100vw - 1350px) / 2 + 1350px - 375px - 110px);
+  }
+  .service-details::after {
+    width: calc((100vw - 1350px) / 2 + 375px + 80px);
+  }
+}
+@media screen and (max-width: 1440px) {
+  .service-details__description {
+    width: 960px;
+  }
+  .service-details__title {
+    width: 910px;
+    display: inline-block;
+    margin-left: calc((100vw - 960px) / 2);
+  }
+  .service-details__img {
+    width: calc(900px + (100vw - 1350px) / 2);
+    margin-right: 0px;
+  }
+  .service-details::before {
+    right: calc((100vw - 1350px) / 2 + 1350px - 900px - 110px);
+  }
+  .service-details::after {
+    width: calc((100vw - 1350px) / 2 + 900px + 80px);
+  }
+  .service-details__page-number {
+    position: static;
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+  }
+  .service-details__devider {
+    display: block;
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .service-details__description {
+    width: 720px;
+  }
+  .service-details__title {
+    width: 670px;
+    margin-left: calc((100vw - 720px) / 2);
+  }
+  .service-details__devider {
+    width: 720px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .service-details__description {
+    font-size: 14px;
+    width: 95%;
+    margin-bottom: 0;
+  }
+  .service-details__title {
+    font-size: 21px;
+    width: 50%;
+    margin-left: 2.5%;
+  }
+  .service-details__page-number {
+    width: 45%;
+  }
+  .service-details__img {
+    width: 90%;
+    height: 250px;
+    margin-top: 0;
+  }
+  .service-details::after {
+    width: 95%;
+    height: 250px;
+    z-index: 8;
+  }
+  .service-details::before {
+    z-index: 10;
+    font-size: 18px;
+    letter-spacing: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    right: 2%;
+    top: 75px;
+    min-width: 100px;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 250px;
+    line-height: 1.5;
+    height: auto;
+  }
+}
 @font-face {
   font-family: "Raleway";
   src: url("fonts/Raleway-VariableFont_wght.ttf");
