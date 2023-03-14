@@ -37,7 +37,7 @@
   content: "";
   display: inline-block;
   width: 3px;
-  background-color: rgba(44, 83, 134, 0.83);
+  background-color: rgba(44, 83, 134, 0.831372549);
 }
 .header-info__logo {
   height: 100%;
@@ -61,7 +61,7 @@
   width: 100%;
   text-align: center;
   text-decoration: none;
-  color: rgba(44, 83, 134, 0.83);
+  color: rgba(44, 83, 134, 0.831372549);
   letter-spacing: 2px;
   display: block;
   grid-column: 1/-1;
@@ -77,7 +77,7 @@
 }
 .phone-numbers__link {
   letter-spacing: 2px;
-  color: rgba(44, 83, 134, 0.83);
+  color: rgba(44, 83, 134, 0.831372549);
   text-decoration: none;
 }
 
@@ -965,7 +965,8 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  margin-top: 0;
 }
 
 .navigation_footer {
@@ -1004,7 +1005,7 @@
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  background-color: rgba(44, 83, 134, 0.83);
+  background-color: rgba(44, 83, 134, 0.831372549);
   height: 40px;
   list-style-type: none;
   padding-left: 0;
@@ -1143,7 +1144,7 @@
   width: 100%;
 }
 .article__title {
-  color: rgba(44, 83, 134, 0.83);
+  color: rgba(44, 83, 134, 0.831372549);
   width: 1720px;
   margin-right: auto;
   margin-left: auto;
@@ -1793,7 +1794,7 @@
 .employee__title {
   font-weight: 700;
   margin-top: 30px;
-  color: rgba(44, 83, 134, 0.83);
+  color: rgba(44, 83, 134, 0.831372549);
   font-size: 24px;
   line-height: 1.5;
 }
