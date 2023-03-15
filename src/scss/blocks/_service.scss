@@ -227,11 +227,12 @@ $point-width: calc(variables.$medium-padding + $big-img-width - 100px);
             }
     
             .service-details__point {
-                margin-left: variables.$default-padding;
+                margin-left: calc(variables.$default-padding - 20px);
             }
             & img {
                 margin: 25px 0 25px 150px;
             }
+            
         }    
     }
 }
