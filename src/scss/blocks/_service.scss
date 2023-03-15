@@ -112,7 +112,7 @@ $point-width: calc(variables.$medium-padding + $big-img-width - 100px);
     &::after {
         content: "";
         border: variables.$orange 1px solid;
-        z-index: 100;
+        z-index: 50;
         top: 5px;
         left: 0px;
         display: block;

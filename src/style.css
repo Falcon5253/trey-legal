@@ -2040,7 +2040,7 @@
 .service-details::after {
   content: "";
   border: #a28038 1px solid;
-  z-index: 100;
+  z-index: 50;
   top: 5px;
   left: 0px;
   display: block;

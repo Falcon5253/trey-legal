@@ -8,7 +8,7 @@
     <title>Trey Legal - Contacts</title>
 </head>
 <body>
-    <header class='header'>
+    <header class='header header'>
         <div class="header-info">
             <div class="header-info__logo">
                 <img src="img/logo.png" alt="Trey legal" class="header-logo">
@@ -35,7 +35,10 @@
             </button>
         </div>
         <nav class="navigation">
-            <button class="navigation__services-button">
+            <button class='navigation__close-button'>
+                <img src="img/close.svg" alt="close button">
+            </button>
+            <button class="navigation__services-button" id='services-button'>
                 Услуги
                 <img src="img/arrow-down.svg" alt="arrow-down" class="navigation__button-arrow">
             </button>
@@ -46,6 +49,166 @@
             <a href="#" class="navigation__item">Контакты</a>
             <input type="button" value="Оставить заявку" class="navigation__lead-button">
         </nav>
+        <div class='menu'>
+            <ul class='menu__service-menu'>
+                <li class='menu__close-menu'>
+                    <img src="img/close.svg" alt="close">
+                </li>
+                <li class='menu__item' id='service_1'>
+                    <a href="#" class='menu__link'>Индивидуализация бизнеса</a>
+                </li>
+                <li class='menu__item' id='service_2'>
+                    <a href="#" class='menu__link'>Патентование</a>
+                </li>
+                <li class='menu__item' id='service_3'>
+                    <a href="#" class='menu__link'>Селекционные</a>
+                </li>
+                <li class='menu__item' id='service_4'>
+                    <a href="#" class='menu__link'>Авторские права</a>
+                </li>
+                <li class='menu__item' id='service_5'>
+                    <a href="#" class='menu__link'>Программы для компьютеров и без данных</a>
+                </li>
+                <li class='menu__item' id='service_6'>
+                    <a href="#" class='menu__link'>Сделки и договоры</a>
+                </li>
+            </ul>
+            <ul class='menu__service-submenu' id='submenu_1'>
+                <li class='menu__arrow-back'>
+                    <img src="img/arrow-back.svg" alt="arrow-left">
+                </li>
+                <li class='menu__item'>
+                    <h2>Индивидуализация бизнеса</h2>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Товарные знаки</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Авторские права</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Программы ддля компьютеров и без данных</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Сделки и договоры</a>
+                </li>
+            </ul>
+            <ul class='menu__service-submenu' id='submenu_2'>
+                <li class='menu__arrow-back'>
+                    <img src="img/arrow-back.svg" alt="arrow-left">
+                </li>
+                <li class='menu__item'>
+                    <h2>Патентование</h2>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Изобретения</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Полезные модели</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Промышленные образцы</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Патентные исследования</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Патентование за рубежом</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Проверка на патентоспособность и патентную чистоту</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Поддержание в силе охранных документов</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Полезные модели</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Патентование за рубежом</a>
+                </li>
+            </ul>
+            <ul class='menu__service-submenu' id='submenu_3'>
+                <li class='menu__arrow-back'>
+                    <img src="img/arrow-back.svg" alt="arrow-left">
+                </li>
+                <li class='menu__item'>
+                    <h2>Селекционные достижения</h2>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Регистрация сортов растений и пород животных</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Оценка охраноспособности селекционных достижений</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Авторские права</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Депонирование авторских прав</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Заключения о нарушении авторских права</a>
+                </li>
+            </ul>
+            <ul class='menu__service-submenu' id='submenu_4'>
+                <li class='menu__arrow-back'>
+                    <img src="img/arrow-back.svg" alt="arrow-left">
+                </li>
+                <li class='menu__item'>
+                    <h2>Авторские права</h2>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Депонирование авторских прав</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Заключение о нарушении авторских прав</a>
+                </li>
+            </ul>
+            <ul class='menu__service-submenu' id='submenu_5'>
+                <li class='menu__arrow-back'>
+                    <img src="img/arrow-back.svg" alt="arrow-left">
+                </li>
+                <li class='menu__item'>
+                    <h2>Программы для компьютеров и баз данных</h2>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Регистрация программв Роспатенте</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Патентование программных алгоритмов</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Оформление перехода прав на объекты интеллектуальной собственности без договора</a>
+                </li>
+            </ul>
+            <ul class='menu__service-submenu' id='submenu_6'>
+                <li class='menu__arrow-back'>
+                    <img src="img/arrow-back.svg" alt="arrow-left">
+                </li>
+                <li class='menu__item'>
+                    <h2>Сделки и договоры</h2>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Составление и регистрация договоров, включающих объекты интеллектуальной собственности</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Лицензионные договоры</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Договоры коммерческой концессии (франчайзинга)</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Отчуждение (уступка) прав на объекты интеллектуальной собственности</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Залог исключительных прав</a>
+                </li>
+                <li class='menu__item'>
+                    <a href="#" class='menu__link'>Оформление перехода прав на объекты интеллектуальной собственности без договора</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <main>
         <p class='bread-crumbs'>Главная <span class='bread-crumbs__devider'>|</span>  Новости</p>
@@ -138,5 +301,6 @@
             </li>
         </ul>
     </footer>
+    <script src="./src/script.js"></script>
 </body>
 </html>
